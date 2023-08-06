@@ -14,6 +14,15 @@ pipeline{
                 url: "https://github.com/Abdulsalam16/abdul_webapp.git"
             )
             }
+        }
+        stage('Unit Test maven'){
+
+            steps{
+               script{
+
+                   mvnTest()
+               }
+            }
+        }
        }
     }
-}
